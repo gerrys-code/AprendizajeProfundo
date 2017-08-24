@@ -1,0 +1,6 @@
+import tensorflow as tf
+
+
+a = tf.add(2,3)
+
+print (a)
