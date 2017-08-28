@@ -1,0 +1,46 @@
+""" Example to demostrate ops.
+UNAM IIMAS
+Course:     Deep Learning
+Professor:  Gibran Fuentes Pineda
+Assistant:  Berenice Montalvo Lezama
+"""
+
+import os
+
+import tensorflow as tf
+
+# silences Tensorflow boot logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+
+def run():
+
+  ################################################
+  # Defining the graph
+
+  x, y = 1, 2
+
+  op1 = tf.add(x, y)
+
+  op2 = tf.multiply(x, y)
+
+  op3 = tf.pow(op2, op1, name='PowOp')
+
+
+  ################################################
+  # Evaluating the graph
+
+  with tf.Session() as sess:
+    writer = tf.summary.FileWriter('graphs/ex3_ops', sess.graph)
+
+    # runs all ops passed as arguments
+    print(sess.run([op1,op2,op3]))
+
+
+def main(args):
+  run()
+  return 0
+
+if __name__ == '__main__':
+  import sys
+  sys.exit(main(sys.argv))

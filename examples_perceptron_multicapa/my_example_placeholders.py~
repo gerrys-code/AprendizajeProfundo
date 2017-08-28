@@ -1,0 +1,14 @@
+import os
+import tensorflow as tf
+
+
+# silences Tensorflow boots logs
+
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+
+def run():
+    #Define the graph
+    #input variables
+    x = tf.placeholder(tf.int32,name="x")
+    y = tf.placeholder(tf.int32,name="y")
+    z = tf.placeholder(tf.int32,name="z")
