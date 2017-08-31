@@ -1,5 +1,5 @@
 """ Simple convolutional neural network.
-UNAM IIMAS
+xkUNAM IIMAS
 Course:     Deep Learning
 Professor:  Gibran Fuentes Pineda
 Assistant:  Berenice Montalvo Lezama
